@@ -2,12 +2,18 @@ import { Box } from "@chakra-ui/react";
 
 const AboutMe = () => {
 	return (
-		<Box h="100vh">
-			<h1 id="About Me">
+		<Box id="About Me" sx={sx.about}>
+			<h1>
 				About Me
 			</h1>
 		</Box>
 	);
 };
+
+const sx = {
+	about: {
+		h: "100vh"
+	}
+}
 
 export default AboutMe;

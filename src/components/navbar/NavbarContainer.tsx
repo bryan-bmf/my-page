@@ -6,6 +6,7 @@ const NavbarContainer = ({ children }: any) => {
 			as="nav"
 			align="center"
 			justify="center"
+      position="fixed"
 			wrap="wrap"
 			w="100%"
 			mb={8}
