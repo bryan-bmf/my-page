@@ -1,14 +1,19 @@
-import { Box, Button } from "@chakra-ui/react";
+import { useState } from "react";
+import MenuLinkContainer from "./navbar/MenuLinkContainer";
+import MenuToggle from "./navbar/MenuToggle";
+import NavbarContainer from "./navbar/NavbarContainer";
 
 const Navbar = () => {
-	const handleScroll = (e: any) => {
-		document.getElementById(e.target.value)?.scrollIntoView({ behavior: "smooth" });
-	}
+
+	const [isOpen, setIsOpen] = useState(false);
+
+	const toggle = () => setIsOpen(!isOpen);
+
 	return (
-		<Box h="100vh">
-			<h1>Navbar</h1>
-            <Button value="about" onClick={handleScroll}>About Me</Button>
-		</Box>
+		<NavbarContainer>
+			<MenuToggle toggle={toggle} isOpen={isOpen} />
+			<MenuLinkContainer isOpen={isOpen} />
+		</NavbarContainer>
 	);
 };
 
