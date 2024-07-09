@@ -2,7 +2,7 @@ import { Box } from "@chakra-ui/react";
 
 const AboutMe = () => {
 	return (
-		<Box id="About Me" sx={sx.about}>
+		<Box id="About Me" sx={sx.about} bg="primary">
 			<h1>
 				About Me
 			</h1>
@@ -13,6 +13,7 @@ const AboutMe = () => {
 const sx = {
 	about: {
 		h: "88vh"
+		
 	}
 }
 
