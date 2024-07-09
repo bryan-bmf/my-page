@@ -12,7 +12,7 @@ const AboutMe = () => {
 
 const sx = {
 	about: {
-		h: "100vh"
+		h: "88vh"
 	}
 }
 

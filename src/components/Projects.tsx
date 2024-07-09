@@ -11,7 +11,7 @@ const Projects = () => {
 const sx = {
 	projects: {
 		// scrollMarginTop: "100px",
-		h: "100vh"
+		h: "88vh"
 	}
 }
 
