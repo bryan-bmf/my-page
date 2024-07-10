@@ -23,6 +23,9 @@ const colors = {
     text: {
       white: "#ffffff",
       black: "#000000",
+    },
+    navbar: {
+      default: "#1a202c"
     }
 	},
 	semanticTokens: {
@@ -43,6 +46,10 @@ const colors = {
         default: "text.black",
         _dark: "text.white",
       },
+      navbar: {
+        default: "white",
+        _dark: "navbar.default",
+      }
 		},
 	},
 };
@@ -50,6 +57,7 @@ const colors = {
 // #06f1ea	#f90e15
 // #8f00fe	#70ff01
 // #eb008b	#14ff74
+// #1a202c
 
 // 3. extend the theme
 const theme = extendTheme({ config, ...colors });
