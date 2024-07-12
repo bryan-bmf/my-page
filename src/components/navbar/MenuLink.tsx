@@ -11,7 +11,7 @@ const MenuLink = ({ children, to, changeColor }: any) => {
 
 	return (
 		<Link>
-			<Text display="block" color="black" title={to} onClick={handleClick}>
+			<Text display="block" color="text" title={to} onClick={handleClick}>
 				{children}
 			</Text>
 		</Link>

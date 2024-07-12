@@ -9,7 +9,7 @@ function App() {
 	return (
 		<div className="App">
 			<Navbar />
-			<Box pt="84px">
+			<Box pt="84px" >
 				<AboutMe />
 				<Projects />
 				<ContactMe />

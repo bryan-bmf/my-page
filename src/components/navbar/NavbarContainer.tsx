@@ -6,12 +6,12 @@ const NavbarContainer = ({ children }: any) => {
 			as="nav"
 			align="center"
 			justify="center"
-      position="fixed"
+      		position="fixed"
 			wrap="wrap"
 			w="100%"
 			mb={8}
 			p={8}
-			bg={["primary.500", "primary.500", "transparent", "transparent"]}
+			bg={["navbar", "primary.500", "transparent", "navbar"]}
 			color={["black", "black", "primary.700", "primary.700"]}
 		>
 			{children}
