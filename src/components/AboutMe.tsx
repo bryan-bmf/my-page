@@ -22,9 +22,8 @@ const AboutMe = () => {
 			) : (
 				<Center>
 					<Box id="About Me" sx={sx.about}>
-						<h1>Hello, welcome to my website!</h1>
-						<Flex align="center" h="inherit" w="inherit">
-							<Box w="300px" p="4">
+						<Flex sx={sx.content}>
+							<Box sx={sx.image}>
 								<Image
 									borderRadius="full"
 									boxSize="200px"
@@ -34,20 +33,24 @@ const AboutMe = () => {
 								/>
 							</Box>
 							<Spacer />
-							<Flex direction="column" p="4">
-								<Text p="4">
-									My name is Bryan Mitchell Flores and I am a software
-									developer.
+							<Flex sx={sx.textContainer}>
+								<Text sx={sx.text}>
+									Hi there! My name is Bryan Mitchell Flores and I am a
+									Software Engineer currently living in Washington, DC.
 								</Text>
-								<Text>
-									Chakra UI is a modern, accessible, and flexible React
-									UI library.
+								<Text sx={sx.text}>
+									I focus on creating websites with React. I enjoy
+									making projects that interest me and find useful in
+									my life. Each time, I try to use something different
+									to learn more about what other technologies are out
+									there.
 								</Text>
-								<Text>
-									"The quick brown fox jumps over the lazy dog" is an
-									English-language pangram—a sentence that contains all
-									of the letters of the English alphabet. Owing to its
-									existence, Chakra was created.
+								<Text sx={sx.text}>
+									Outside of coding, I also enjoy playing video games,
+									rock climbing, crate digging and trying out new
+									recipes in the kitchen. I'm always looking for new
+									opportunities to learn and grow. Thank you for
+									visiting my website!
 								</Text>
 							</Flex>
 						</Flex>
@@ -66,6 +69,24 @@ const sx = {
 		border: "1px solid black",
 		borderRadius: "8px",
 		boxShadow: "0px 4px 8px 0px rgba(0,0,0,0.2)",
+	},
+	text: {
+		p: "2",
+		textAlign: "left",
+		fontSize: "md",
+	},
+	image: {
+		w: "300px",
+		p: "4",
+	},
+	content: {
+		alignItems: "center",
+		h: "inherit",
+		w: "inherit",
+	},
+	textContainer: {
+		flexDirection: "column",
+		p: "4",
 	},
 };
 
