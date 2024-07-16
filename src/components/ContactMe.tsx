@@ -1,5 +1,6 @@
 import {
 	Box,
+	Button,
 	Center,
 	Flex,
 	HStack,
@@ -14,7 +15,7 @@ const ContactMe = () => {
 		<Center>
 			<Box id="Contact Me" sx={sx.contact}>
 				<h1>Contact Me</h1>
-				<HStack w="inherit">
+				<HStack>
 					<Flex sx={sx.flex}>
 						<Text mb="2">Name:</Text>
 						<Input
@@ -33,10 +34,10 @@ const ContactMe = () => {
 						/>
 					</Flex>
 				</HStack>
-				<Textarea
-					placeholder="Write your message"
-					sx={sx.textArea}
-				/>
+				<Textarea placeholder="Write your message..." sx={sx.textArea} />
+				<Flex direction="row-reverse">
+					<Button>Send Email</Button>
+				</Flex>
 			</Box>
 		</Center>
 	);
@@ -45,20 +46,22 @@ const ContactMe = () => {
 const sx = {
 	contact: {
 		h: "88vh",
-		maxW: "75vw",
+		maxW: "50vw",
+		w: "100%"
 	},
 	input: {
-		w: "20rem",
 		mb: "4",
 	},
 	textArea: {
 		resize: "none",
-		size: "md",
-		w: "665px",
+		w: "100%",
+		h: "200px",
+		mb: "4",
 	},
 	flex: {
 		flexDirection: "column",
 		alignItems: "baseline",
+		w: "100%",
 	},
 };
 
