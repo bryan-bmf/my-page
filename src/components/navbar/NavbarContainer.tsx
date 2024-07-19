@@ -9,6 +9,7 @@ const NavbarContainer = ({ children }: any) => {
       		position="fixed"
 			wrap="wrap"
 			w="100%"
+			zIndex="2"
 			mb={8}
 			p={8}
 			bg={["navbar", "primary.500", "navbar", "navbar"]}
