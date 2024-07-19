@@ -1,8 +1,17 @@
-import { Card, CardBody, Heading, Image, Stack, Text } from "@chakra-ui/react";
+import {
+    Card,
+    CardBody,
+    Heading,
+    Image,
+    ListItem,
+    Stack,
+    Text,
+    UnorderedList,
+} from "@chakra-ui/react";
 
 const ProjectCard = ({ title, description, techStack }: Props) => {
 	return (
-		<Card maxW="xs" variant="outline" zIndex="-1" >
+		<Card maxW="xs" variant="outline" zIndex="-1">
 			<CardBody>
 				<Image
 					src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
@@ -11,9 +20,13 @@ const ProjectCard = ({ title, description, techStack }: Props) => {
 				/>
 				<Stack mt="6" spacing="3">
 					<Heading size="md">{title}</Heading>
-					<Text>{description}</Text>
-					<Text color="blue.600" fontSize="2xl">
-						{techStack.map((tech) => <ul><li>{tech}</li></ul>)}
+					<Text textAlign="left">{description}</Text>
+					<Text textAlign="left">
+						{techStack.map((tech) => (
+							<UnorderedList>
+								<ListItem>{tech}</ListItem>
+							</UnorderedList>
+						))}
 					</Text>
 				</Stack>
 			</CardBody>
