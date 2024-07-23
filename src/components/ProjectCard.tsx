@@ -25,6 +25,7 @@ const ProjectCard = ({
 	site,
 	gif,
 }: Props) => {
+	
 	let gifSrc = "";
 	if (gif === "anime") gifSrc = anime;
 	else if (gif === "vinyl") gifSrc = vinyl;
