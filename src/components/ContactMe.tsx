@@ -3,7 +3,7 @@ import { Box, Button, Center, Heading } from "@chakra-ui/react";
 const ContactMe = () => {
 	return (
 		<Center>
-			<Box id="Contact Me" sx={sx.contact}>
+			<Box id="Contact" sx={sx.contact}>
 				<Heading sx={sx.header}>Stay in touch!</Heading>
 				<Button>
 					<a href="mailto:bryan.mitchellflores@gmail.com" target="_blank">
@@ -17,9 +17,9 @@ const ContactMe = () => {
 
 const sx = {
 	contact: {
-		h: "100vh",
+		// h: "100vh",
 		maxW: "50vw",
-		// h: "100%",
+		h: "40vh",
 	},
 	header: {
 		mb: "20",

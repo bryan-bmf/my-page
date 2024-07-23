@@ -37,6 +37,10 @@
   }
 }
 
-* {
+#About {
   scroll-margin-top: 100px;
+}
+
+#Projects {
+  scroll-margin-top: 170px;
 }
