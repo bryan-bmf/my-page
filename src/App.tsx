@@ -2,20 +2,20 @@ import { Box } from "@chakra-ui/react";
 import "./App.css";
 import AboutMe from "./components/AboutMe";
 import ContactMe from "./components/ContactMe";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
-import Footer from "./components/Footer";
 
 function App() {
 	return (
 		<div className="App">
 			<Navbar />
-			<Box pt="84px" >
+			<Box pt="84px">
 				<AboutMe />
 				<Projects />
 				<ContactMe />
-				<Footer />
 			</Box>
+			<Footer />
 		</div>
 	);
 }

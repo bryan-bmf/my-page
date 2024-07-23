@@ -20,48 +20,54 @@ const AboutMe = () => {
 			{mobile ? (
 				<AboutMeMobile />
 			) : (
-				<Center>
-					<Box id="About Me" sx={sx.about}>
-						<Flex sx={sx.content}>
-							<Box sx={sx.image}>
-								<Image
-									borderRadius="full"
-									boxSize="200px"
-									maxWidth="200px"
-									src={foto}
-									alt="Bryan Mitchell Flores"
-								/>
-							</Box>
-							<Spacer />
-							<Flex sx={sx.textContainer}>
-								<Text sx={sx.text}>
-									Hi there! My name is Bryan Mitchell Flores and I am a
-									Software Engineer currently living in Washington, DC.
-								</Text>
-								<Text sx={sx.text}>
-									I focus on creating websites with React. I enjoy
-									making projects that interest me and find useful in
-									my life. Each time, I try to use something different
-									to learn more about what other technologies are out
-									there.
-								</Text>
-								<Text sx={sx.text}>
-									Outside of coding, I also enjoy playing video games,
-									rock climbing, crate digging and trying out new
-									recipes in the kitchen. I'm always looking for new
-									opportunities to learn and grow. Thank you for
-									visiting my website!
-								</Text>
+				<Box sx={sx.container}>
+					<Center>
+						<Box id="About" sx={sx.about}>
+							<Flex sx={sx.content}>
+								<Box sx={sx.image}>
+									<Image
+										borderRadius="full"
+										boxSize="200px"
+										maxWidth="200px"
+										src={foto}
+										alt="Bryan Mitchell Flores"
+									/>
+								</Box>
+								<Spacer />
+								<Flex sx={sx.textContainer}>
+									<Text sx={sx.text}>
+										Hi there! My name is Bryan Mitchell Flores and I
+										am a Software Engineer currently living in
+										Washington, DC.
+									</Text>
+									<Text sx={sx.text}>
+										I focus on creating websites with React. I enjoy
+										making projects that interest me and find useful
+										in my life. Each time, I try to use something
+										different to learn more about what other
+										technologies are out there.
+									</Text>
+									<Text sx={sx.text}>
+										Outside of coding, I also enjoy playing video
+										games, rock climbing, crate digging and trying out
+										new recipes in the kitchen. I'm always looking for
+										new opportunities to learn and grow. Thank you for
+										visiting my website!
+									</Text>
+								</Flex>
 							</Flex>
-						</Flex>
-					</Box>
-				</Center>
+						</Box>
+					</Center>
+				</Box>
 			)}
 		</>
 	);
 };
 
 const sx = {
+	container: {
+		mb: "20",
+	},
 	about: {
 		maxW: "88vw",
 		p: "4",

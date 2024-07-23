@@ -3,40 +3,42 @@ import foto from "../assets/foto.jpg";
 
 const AboutMeMobile = () => {
 	return (
-		<Center>
-			<Box id="About Me" sx={sx.about}>
-				<Box sx={sx.content}>
-					<Center sx={sx.image}>
-						<Image
-							borderRadius="full"
-							boxSize="200px"
-							maxWidth="200px"
-							src={foto}
-							alt="Bryan Mitchell Flores"
-						/>
-					</Center>
-					<Spacer p="2" />
-					<Box sx={sx.textContainer}>
-						<Text sx={sx.text}>
-							Hi there! My name is Bryan Mitchell Flores and I am a
-							Software Engineer currently living in Washington, DC.
-						</Text>
-						<Text sx={sx.text}>
-							I focus on creating websites with React. I enjoy making
-							projects that interest me and find useful in my life. Each
-							time, I try to use something different to learn more about
-							what other technologies are out there.
-						</Text>
-						<Text sx={sx.text}>
-							Outside of coding, I also enjoy playing video games, rock
-							climbing, crate digging and trying out new recipes in the
-							kitchen. I'm always looking for new opportunities to learn
-							and grow. Thank you for visiting my website!
-						</Text>
+		<Box mb="20">
+			<Center>
+				<Box id="About Me" sx={sx.about}>
+					<Box sx={sx.content}>
+						<Center sx={sx.image}>
+							<Image
+								borderRadius="full"
+								boxSize="200px"
+								maxWidth="200px"
+								src={foto}
+								alt="Bryan Mitchell Flores"
+							/>
+						</Center>
+						<Spacer p="2" />
+						<Box sx={sx.textContainer}>
+							<Text sx={sx.text}>
+								Hi there! My name is Bryan Mitchell Flores and I am a
+								Software Engineer currently living in Washington, DC.
+							</Text>
+							<Text sx={sx.text}>
+								I focus on creating websites with React. I enjoy making
+								projects that interest me and find useful in my life.
+								Each time, I try to use something different to learn
+								more about what other technologies are out there.
+							</Text>
+							<Text sx={sx.text}>
+								Outside of coding, I also enjoy playing video games,
+								rock climbing, crate digging and trying out new recipes
+								in the kitchen. I'm always looking for new opportunities
+								to learn and grow. Thank you for visiting my website!
+							</Text>
+						</Box>
 					</Box>
 				</Box>
-			</Box>
-		</Center>
+			</Center>
+		</Box>
 	);
 };
 

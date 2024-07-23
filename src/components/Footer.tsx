@@ -30,7 +30,7 @@ const sx = {
 		borderStyle: "solid",
 		py: 4,
 		px: 8,
-		position: "fixed",
+		position: "relative",
 		bottom: 0,
 		width: "100%",
 	},
