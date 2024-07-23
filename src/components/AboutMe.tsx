@@ -20,7 +20,7 @@ const AboutMe = () => {
 			{mobile ? (
 				<AboutMeMobile />
 			) : (
-				<Box sx={sx.container} scrollMarginTop="100px">
+				<Box sx={sx.container}>
 					<Center>
 						<Box id="About" sx={sx.about}>
 							<Flex sx={sx.content}>
@@ -67,7 +67,6 @@ const AboutMe = () => {
 const sx = {
 	container: {
 		mb: "20",
-		scrollMarginTop: "100px",
 	},
 	about: {
 		maxW: "88vw",

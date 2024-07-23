@@ -17,7 +17,6 @@ const ContactMe = () => {
 
 const sx = {
 	contact: {
-		// h: "100vh",
 		maxW: "50vw",
 		h: "40vh",
 	},

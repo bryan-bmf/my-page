@@ -5,7 +5,7 @@ import ProjectCard from "./ProjectCard";
 const Projects = () => {
 	return (
 		<>
-			<Flex>
+			<Flex justifyContent="center">
 				<Heading sx={sx.header}>
 					Projects
 				</Heading>
@@ -39,7 +39,7 @@ const sx = {
 	header: {
 		textAlign: "left",
 		w: "88vw",
-		mb: "10"
+		mb: "10",
 	}
 };
 

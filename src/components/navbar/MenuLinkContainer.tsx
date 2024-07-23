@@ -28,7 +28,7 @@ const MenuLinkContainer = ({ isOpen }: any) => {
 				<MenuLink to="About">About Me</MenuLink>
 				<MenuLink to="Projects">Projects</MenuLink>
 				<MenuLink to="Contact">Contact Me</MenuLink>
-				<MenuLink to="Resume">Resumé</MenuLink>
+				<MenuLink to="Resume" resume={true}>Resumé</MenuLink>
 				<MenuLink to="DarkMode" changeColor={handleColorMode}>
 					{isLightMode ? <SunIcon /> : <MoonIcon />}
 				</MenuLink>
