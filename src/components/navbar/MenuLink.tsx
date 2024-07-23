@@ -1,11 +1,10 @@
 import { Link, Text } from "@chakra-ui/react";
 
 const MenuLink = ({ children, to, changeColor, resume }: Props) => {
-	console.log(resume)
 	const handleClick = (e: any) => {
 		// if not dark mode button, scroll to corresponding section.
 		// else switch color mode.
-		if(e.target.title)
+		if(e.target.title && e.target.title !== null)
 			document.getElementById(e.target.title)!.scrollIntoView({ behavior: "smooth" });
 		else changeColor();
 	};
