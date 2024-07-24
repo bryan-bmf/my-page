@@ -4,7 +4,7 @@ import { extendTheme } from "@chakra-ui/react";
 // 2. Add your color mode config
 const config = {
 	initialColorMode: "system",
-	useSystemColorMode: false,
+	useSystemColorMode: true,
 };
 
 const colors = {
@@ -20,13 +20,17 @@ const colors = {
 			secondary: "#8f00fe",
 			detail: "#eb008b",
 		},
-    text: {
-      white: "#ffffff",
-      black: "#000000",
-    },
-    navbar: {
-      default: "#1a202c"
-    }
+		text: {
+			white: "#ffffff",
+			black: "#000000",
+		},
+		navbar: {
+			default: "#1a202c",
+		},
+		backgroundTheme: {
+			light: "#ffffff",
+			dark: "#1a202c",
+		}
 	},
 	semanticTokens: {
 		colors: {
@@ -34,22 +38,22 @@ const colors = {
 				default: "lightColors.primary",
 				_dark: "darkColors.primary",
 			},
-      secondary: {
+			secondary: {
 				default: "lightColors.secondary",
 				_dark: "darkColors.secondary",
 			},
-      detail: {
+			detail: {
 				default: "lightColors.detail",
 				_dark: "darkColors.detail",
 			},
-      text: {
-        default: "text.black",
-        _dark: "text.white",
-      },
-      navbar: {
-        default: "white",
-        _dark: "navbar.default",
-      }
+			text: {
+				default: "text.black",
+				_dark: "text.white",
+			},
+			background: {
+				default: "backgroundTheme.light",
+				_dark: "backgroundTheme.dark",
+			},
 		},
 	},
 };

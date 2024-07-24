@@ -12,7 +12,8 @@ import {
 	ListItem,
 	Stack,
 	Text,
-	UnorderedList
+	UnorderedList,
+	useColorMode,
 } from "@chakra-ui/react";
 import anime from "../assets/anime.gif";
 import cpc from "../assets/cpc.gif";
@@ -31,12 +32,14 @@ const ProjectCard = ({
 	else if (gif === "vinyl") gifSrc = vinyl;
 	else gifSrc = cpc;
 
+	const { colorMode, toggleColorMode } = useColorMode();
+	let gradient = colorMode === "light" ? undefined : sx.darkGradient;
+
 	return (
-		<Card maxW="xs" variant="outline">
+		<Card maxW="xs" variant="outline" sx={gradient}>
 			<CardBody>
 				<Image
 					src={gifSrc}
-					alt="Green double couch with wooden legs"
 					borderRadius="lg"
 				/>
 				<Stack mt="6" spacing="3">
@@ -69,6 +72,13 @@ const ProjectCard = ({
 			</CardFooter>
 		</Card>
 	);
+};
+
+const sx = {
+	darkGradient: {
+		background: `linear-gradient(#1a202c, #1a202c) padding-box, 
+	linear-gradient(135deg, #06f1ea, #eb008b) border-box`,
+	},
 };
 
 interface Props {

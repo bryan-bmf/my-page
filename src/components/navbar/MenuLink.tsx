@@ -18,7 +18,7 @@ const MenuLink = ({ children, to, changeColor, resume }: Props) => {
 	)
 
 	return (
-		resume ? resumeLink : <Link><Text display="block" color="text" title={to} onClick={handleClick}>{children}</Text></Link>
+		resume ? resumeLink : <Link _hover={{ bg: "secondary" }}><Text display="block" color="text" title={to} onClick={handleClick}>{children}</Text></Link>
 	)
 		
 };	

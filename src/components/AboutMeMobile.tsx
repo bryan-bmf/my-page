@@ -1,11 +1,14 @@
-import { Box, Center, Image, Spacer, Text } from "@chakra-ui/react";
+import { Box, Center, Image, Spacer, Text, useColorMode } from "@chakra-ui/react";
 import foto from "../assets/foto.jpg";
 
 const AboutMeMobile = () => {
+	const { colorMode, toggleColorMode } = useColorMode();
+	let gradient = colorMode === "light" ? sx.lightGradient : sx.darkGradient;
+
 	return (
 		<Box mb="20">
 			<Center>
-				<Box id="About Me" sx={sx.about}>
+				<Box id="About Me" sx={{...sx.about, ...gradient}}>
 					<Box sx={sx.content}>
 						<Center sx={sx.image}>
 							<Image
@@ -47,9 +50,17 @@ const sx = {
 		maxW: "88vw",
 		p: "4",
 		mt: "4",
-		border: "1px solid black",
+		border: "1px solid transparent",
 		borderRadius: "8px",
 		boxShadow: "0px 4px 8px 0px rgba(0,0,0,0.2)",
+	},
+	lightGradient: {
+		background: `linear-gradient(white, white) padding-box, 
+		linear-gradient(135deg, black, black) border-box`,
+	},
+	darkGradient: {
+		background: `linear-gradient(#1a202c, #1a202c) padding-box, 
+		linear-gradient(135deg, #06f1ea, #eb008b) border-box`,
 	},
 	text: {
 		p: "2",
