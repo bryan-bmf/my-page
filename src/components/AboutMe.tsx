@@ -6,6 +6,7 @@ import {
 	Spacer,
 	Text,
 	useBreakpoint,
+	useColorMode,
 } from "@chakra-ui/react";
 import foto from "../assets/foto.jpg";
 import AboutMeMobile from "./AboutMeMobile";
@@ -15,6 +16,9 @@ const AboutMe = () => {
 	const breakpoint = useBreakpoint();
 	let mobile = breakpoint === "base" ? true : false;
 
+	const { colorMode, toggleColorMode } = useColorMode();
+	let gradient = colorMode === "light" ? sx.lightGradient : sx.darkGradient;
+
 	return (
 		<>
 			{mobile ? (
@@ -22,7 +26,7 @@ const AboutMe = () => {
 			) : (
 				<Box sx={sx.container}>
 					<Center>
-						<Box id="About" sx={sx.about}>
+						<Box id="About" sx={{...sx.about, ...gradient}}>
 							<Flex sx={sx.content}>
 								<Box sx={sx.image}>
 									<Image
@@ -31,6 +35,7 @@ const AboutMe = () => {
 										maxWidth="200px"
 										src={foto}
 										alt="Bryan Mitchell Flores"
+										sx={colorMode === "light" ? undefined : {...sx.imageGradient}}
 									/>
 								</Box>
 								<Spacer />
@@ -72,9 +77,17 @@ const sx = {
 		maxW: "88vw",
 		p: "4",
 		mt: "4",
-		border: "1px solid black",
+		border: "1px solid transparent",
 		borderRadius: "8px",
 		boxShadow: "0px 4px 8px 0px rgba(0,0,0,0.2)",
+	},
+	lightGradient: {
+		background: `linear-gradient(white, white) padding-box, 
+		linear-gradient(135deg, black, black) border-box`,
+	},
+	darkGradient: {
+		background: `linear-gradient(#1a202c, #1a202c) padding-box, 
+		linear-gradient(135deg, #06f1ea, #eb008b) border-box`,
 	},
 	text: {
 		p: "2",
@@ -84,6 +97,7 @@ const sx = {
 	image: {
 		w: "300px",
 		p: "4",
+		borderColor: "white"
 	},
 	content: {
 		alignItems: "center",
@@ -93,6 +107,11 @@ const sx = {
 	textContainer: {
 		flexDirection: "column",
 		p: "4",
+	},
+	imageGradient: {
+		border: "2px solid transparent",
+		background: `linear-gradient(#1a202c, #1a202c) padding-box, 
+		linear-gradient(135deg, #eb008b, #06f1ea) border-box`,
 	},
 };
 

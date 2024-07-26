@@ -12,7 +12,7 @@ const NavbarContainer = ({ children }: any) => {
 			zIndex="2"
 			mb={8}
 			p={8}
-			bg={["navbar", "primary.500", "navbar", "navbar"]}
+			bg="background"
 			color={["black", "black", "primary.700", "primary.700"]}
 		>
 			{children}

@@ -5,11 +5,12 @@ import linkedin from "../assets/linkedin.png";
 
 const Footer = () => {
     const { colorMode, toggleColorMode } = useColorMode();
+	let gradient = colorMode === "light" ? sx.lightGradient : sx.darkGradient;
 
 	const year = new Date().getFullYear();
 
 	return (
-		<Box sx={sx.footer}>
+		<Box sx={{...sx.footer, ...gradient}}>
 			<Text mb="2" color="text">Built by Bryan - {year}</Text>
 			<Center>
 				<HStack>
@@ -23,16 +24,20 @@ const Footer = () => {
 
 const sx = {
 	footer: {
-		backgroundColor: "navbar",
-		color: "black",
-		borderColor: "black",
-		borderTop: "1px solid",
-		borderStyle: "solid",
+		borderTop: "1px solid transparent",
 		py: 4,
 		px: 8,
 		position: "relative",
 		bottom: 0,
 		width: "100%",
+	},
+	lightGradient: {
+		background: `linear-gradient(white, white) padding-box, 
+	linear-gradient(135deg, black, black) border-box`,
+	},
+	darkGradient: {
+		background: `linear-gradient(#1a202c, #1a202c) padding-box, 
+	linear-gradient(135deg, #06f1ea, #eb008b) border-box`,
 	},
 };
 

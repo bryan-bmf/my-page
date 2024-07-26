@@ -3,53 +3,77 @@ import { extendTheme } from "@chakra-ui/react";
 
 // 2. Add your color mode config
 const config = {
-	initialColorMode: "system",
-	useSystemColorMode: false,
+	initialColorMode: "dark",
+	useSystemColorMode: true,
 };
 
 const colors = {
 	colors: {
 		lightColors: {
-			primary: "#f90e15",
-			secondary: "#70ff01",
-			detail: "#14ff74",
+			primary: "#4d97cc",
+			primary20: "#80b5db",
+			secondary: "#F58426",
+			secondary20: "#f79d51",
+			detail: "#97CC4D",
+			detail20: "#acd671",
 		},
 		darkColors: {
-			// Define your dark colors here
 			primary: "#06f1ea",
-			secondary: "#8f00fe",
-			detail: "#eb008b",
+			primary20: "#05c1bb",
+			primary40: "#04918c", 
+			secondary: "#eb008b",
+			secondary20: "#bc006f",
+			secondary40: "#8d0053", 
+            detail: "#8f00fe",
+			detail20: "#7200cb",
+
 		},
-    text: {
-      white: "#ffffff",
-      black: "#000000",
-    },
-    navbar: {
-      default: "#1a202c"
-    }
+		text: {
+			white: "#ffffff",
+			black: "#000000",
+		},
+		navbar: {
+			default: "#1a202c",
+		},
+		backgroundTheme: {
+			light: "#ffffff",
+			dark: "#1a202c",
+		}
 	},
 	semanticTokens: {
 		colors: {
-			primary: {
+			codeButton: {
 				default: "lightColors.primary",
-				_dark: "darkColors.primary",
+				_dark: "darkColors.primary20",
 			},
-      secondary: {
+			codeButtonHover: {
+				default: "lightColors.primary20",
+				_dark: "darkColors.primary40",
+			},
+			siteButton: {
 				default: "lightColors.secondary",
-				_dark: "darkColors.secondary",
+				_dark: "darkColors.secondary20",
 			},
-      detail: {
+			siteButtonHover: {
+				default: "lightColors.secondary20",
+				_dark: "darkColors.secondary40",
+			},
+			contactButton: {
 				default: "lightColors.detail",
 				_dark: "darkColors.detail",
 			},
-      text: {
-        default: "text.black",
-        _dark: "text.white",
-      },
-      navbar: {
-        default: "white",
-        _dark: "navbar.default",
-      }
+			contactButtonHover: {
+				default: "lightColors.detail20",
+				_dark: "darkColors.detail20",
+			},
+			text: {
+				default: "text.black",
+				_dark: "text.white",
+			},
+			background: {
+				default: "backgroundTheme.light",
+				_dark: "backgroundTheme.dark",
+			},
 		},
 	},
 };

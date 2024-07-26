@@ -1,17 +1,19 @@
 import {
-    Button,
-    ButtonGroup,
-    Card,
-    CardBody,
-    CardFooter,
-    Divider,
-    Heading,
-    Image,
-    Link,
-    ListItem,
-    Stack,
-    Text,
-    UnorderedList,
+	Box,
+	Button,
+	ButtonGroup,
+	Card,
+	CardBody,
+	CardFooter,
+	Divider,
+	Heading,
+	Image,
+	Link,
+	ListItem,
+	Stack,
+	Text,
+	UnorderedList,
+	useColorMode
 } from "@chakra-ui/react";
 import anime from "../assets/anime.gif";
 import cpc from "../assets/cpc.gif";
@@ -25,18 +27,19 @@ const ProjectCard = ({
 	site,
 	gif,
 }: Props) => {
-	
 	let gifSrc = "";
 	if (gif === "anime") gifSrc = anime;
 	else if (gif === "vinyl") gifSrc = vinyl;
 	else gifSrc = cpc;
 
+	const { colorMode, toggleColorMode } = useColorMode();
+	let gradient = colorMode === "light" ? undefined : sx.darkGradient;
+
 	return (
-		<Card maxW="xs" variant="outline">
+		<Card maxW="xs" variant="outline" sx={gradient}>
 			<CardBody>
 				<Image
 					src={gifSrc}
-					alt="Green double couch with wooden legs"
 					borderRadius="lg"
 				/>
 				<Stack mt="6" spacing="3">
@@ -45,30 +48,49 @@ const ProjectCard = ({
 					<Heading size="sm" fontWeight="semibold" textAlign="left">
 						Tech Stack
 					</Heading>
-					<Text textAlign="left">
-						{techStack.map((tech) => (
-							<UnorderedList>
-								<ListItem>{tech}</ListItem>
-							</UnorderedList>
-						))}
-					</Text>
+					<Box textAlign="left">
+						<UnorderedList>
+							{techStack.map((tech) => (
+								<ListItem key={tech}>{tech}</ListItem>
+							))}
+						</UnorderedList>
+					</Box>
 				</Stack>
 			</CardBody>
 			<Divider />
 			<CardFooter justifyContent="center">
 				<ButtonGroup spacing="2">
 					<Link href={github} isExternal>
-						<Button>View Code</Button>
+						<Button  sx={sx.codeButton}>View Code</Button>
 					</Link>
 					{site ? (
 						<Link href={site} isExternal>
-							<Button>View Site</Button>
+							<Button sx={sx.siteButton}>View Site</Button>
 						</Link>
 					) : null}
 				</ButtonGroup>
 			</CardFooter>
 		</Card>
 	);
+};
+
+const sx = {
+	darkGradient: {
+		background: `linear-gradient(#1a202c, #1a202c) padding-box, 
+	linear-gradient(135deg, #06f1ea, #eb008b) border-box`,
+	},
+	codeButton: {
+		background: "codeButton",
+		_hover: {
+            background: "codeButtonHover",
+        },
+	},
+	siteButton: {
+		background: "siteButton",
+		_hover: {
+            background: "siteButtonHover",
+        },
+	},
 };
 
 interface Props {
