@@ -14,7 +14,8 @@ const colors = {
 			primary20: "#80b5db",
 			secondary: "#F58426",
 			secondary20: "#f79d51",
-			detail: "#bec0c2",
+			detail: "#97CC4D",
+			detail20: "#acd671",
 		},
 		darkColors: {
 			primary: "#06f1ea",
@@ -24,6 +25,8 @@ const colors = {
 			secondary20: "#bc006f",
 			secondary40: "#8d0053", 
             detail: "#8f00fe",
+			detail20: "#7200cb",
+
 		},
 		text: {
 			white: "#ffffff",
@@ -55,9 +58,13 @@ const colors = {
 				default: "lightColors.secondary20",
 				_dark: "darkColors.secondary40",
 			},
-			detail: {
+			contactButton: {
 				default: "lightColors.detail",
 				_dark: "darkColors.detail",
+			},
+			contactButtonHover: {
+				default: "lightColors.detail20",
+				_dark: "darkColors.detail20",
 			},
 			text: {
 				default: "text.black",
