@@ -8,7 +8,7 @@ const AboutMeMobile = () => {
 	return (
 		<Box mb="20">
 			<Center>
-				<Box id="About Me" sx={{...sx.about, ...gradient}}>
+				<Box id="About" sx={{...sx.about, ...gradient}}>
 					<Box sx={sx.content}>
 						<Center sx={sx.image}>
 							<Image
