@@ -3,22 +3,27 @@ import { extendTheme } from "@chakra-ui/react";
 
 // 2. Add your color mode config
 const config = {
-	initialColorMode: "system",
+	initialColorMode: "dark",
 	useSystemColorMode: true,
 };
 
 const colors = {
 	colors: {
 		lightColors: {
-			primary: "#f90e15",
-			secondary: "#70ff01",
-			detail: "#14ff74",
+			primary: "#4d97cc",
+			primary20: "#80b5db",
+			secondary: "#F58426",
+			secondary20: "#f79d51",
+			detail: "#bec0c2",
 		},
 		darkColors: {
-			// Define your dark colors here
 			primary: "#06f1ea",
-			secondary: "#8f00fe",
-			detail: "#eb008b",
+			primary20: "#05c1bb",
+			primary40: "#04918c", 
+			secondary: "#eb008b",
+			secondary20: "#bc006f",
+			secondary40: "#8d0053", 
+            detail: "#8f00fe",
 		},
 		text: {
 			white: "#ffffff",
@@ -34,13 +39,21 @@ const colors = {
 	},
 	semanticTokens: {
 		colors: {
-			primary: {
+			codeButton: {
 				default: "lightColors.primary",
-				_dark: "darkColors.primary",
+				_dark: "darkColors.primary20",
 			},
-			secondary: {
+			codeButtonHover: {
+				default: "lightColors.primary20",
+				_dark: "darkColors.primary40",
+			},
+			siteButton: {
 				default: "lightColors.secondary",
-				_dark: "darkColors.secondary",
+				_dark: "darkColors.secondary20",
+			},
+			siteButtonHover: {
+				default: "lightColors.secondary20",
+				_dark: "darkColors.secondary40",
 			},
 			detail: {
 				default: "lightColors.detail",

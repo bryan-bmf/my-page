@@ -13,7 +13,7 @@ import {
 	Stack,
 	Text,
 	UnorderedList,
-	useColorMode,
+	useColorMode
 } from "@chakra-ui/react";
 import anime from "../assets/anime.gif";
 import cpc from "../assets/cpc.gif";
@@ -61,11 +61,11 @@ const ProjectCard = ({
 			<CardFooter justifyContent="center">
 				<ButtonGroup spacing="2">
 					<Link href={github} isExternal>
-						<Button>View Code</Button>
+						<Button  sx={sx.codeButton}>View Code</Button>
 					</Link>
 					{site ? (
 						<Link href={site} isExternal>
-							<Button>View Site</Button>
+							<Button sx={sx.siteButton}>View Site</Button>
 						</Link>
 					) : null}
 				</ButtonGroup>
@@ -78,6 +78,18 @@ const sx = {
 	darkGradient: {
 		background: `linear-gradient(#1a202c, #1a202c) padding-box, 
 	linear-gradient(135deg, #06f1ea, #eb008b) border-box`,
+	},
+	codeButton: {
+		background: "codeButton",
+		_hover: {
+            background: "codeButtonHover",
+        },
+	},
+	siteButton: {
+		background: "siteButton",
+		_hover: {
+            background: "siteButtonHover",
+        },
 	},
 };
 

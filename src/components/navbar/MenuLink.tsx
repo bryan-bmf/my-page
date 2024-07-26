@@ -10,15 +10,15 @@ const MenuLink = ({ children, to, changeColor, resume }: Props) => {
 	};
 
 	const resumeLink = (
-		<Link href="https://bit.ly/bryanmitchellfloresresume" isExternal>
-			<Text display="block" color="text" title={to}>
+		<Link href="https://bit.ly/bryanmitchellfloresresume" color="text" isExternal>
+			<Text display="block" title={to}>
 				{children}
 			</Text>
 		</Link>
 	)
 
 	return (
-		resume ? resumeLink : <Link _hover={{ bg: "secondary" }}><Text display="block" color="text" title={to} onClick={handleClick}>{children}</Text></Link>
+		resume ? resumeLink : <Link color="text"><Text display="block" title={to} onClick={handleClick}>{children}</Text></Link>
 	)
 		
 };	
