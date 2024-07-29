@@ -10,7 +10,7 @@ function App() {
 	return (
 		<div className="App">
 			<Navbar />
-			<Box pt="84px">
+			<Box pt="84px" bg="background">
 				<AboutMe />
 				<Projects />
 				<ContactMe />

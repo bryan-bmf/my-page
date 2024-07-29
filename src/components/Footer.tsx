@@ -30,9 +30,10 @@ const sx = {
 		position: "relative",
 		bottom: 0,
 		width: "100%",
+		background: "background"
 	},
 	lightGradient: {
-		background: `linear-gradient(white, white) padding-box, 
+		background: `linear-gradient(#f9f9f9, #f9f9f9) padding-box, 
 	linear-gradient(135deg, black, black) border-box`,
 	},
 	darkGradient: {

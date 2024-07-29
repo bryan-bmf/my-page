@@ -5,7 +5,7 @@ const ContactMe = () => {
 		<Center>
 			<Box id="Contact" sx={sx.contact}>
 				<Heading sx={sx.header}>Stay in touch!</Heading>
-				<Button sx={sx.button}>
+				<Button role="button" sx={sx.button}>
 					<a href="mailto:bryan.mitchellflores@gmail.com" target="_blank">
 						Contact Me
 					</a>

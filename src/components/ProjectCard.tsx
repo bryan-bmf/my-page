@@ -35,12 +35,15 @@ const ProjectCard = ({
 	const { colorMode, toggleColorMode } = useColorMode();
 	let gradient = colorMode === "light" ? undefined : sx.darkGradient;
 
+	let altText = `A gif depicting the ${title} website`;
+
 	return (
 		<Card maxW="xs" variant="outline" sx={gradient}>
 			<CardBody>
 				<Image
 					src={gifSrc}
 					borderRadius="lg"
+					aria-label={altText}
 				/>
 				<Stack mt="6" spacing="3">
 					<Heading size="md">{title}</Heading>
@@ -60,11 +63,11 @@ const ProjectCard = ({
 			<Divider />
 			<CardFooter justifyContent="center">
 				<ButtonGroup spacing="2">
-					<Link href={github} isExternal>
+					<Link role="button" href={github} isExternal>
 						<Button  sx={sx.codeButton}>View Code</Button>
 					</Link>
 					{site ? (
-						<Link href={site} isExternal>
+						<Link role="button" href={site} isExternal>
 							<Button sx={sx.siteButton}>View Site</Button>
 						</Link>
 					) : null}
