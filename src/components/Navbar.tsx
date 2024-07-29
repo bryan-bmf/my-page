@@ -10,7 +10,7 @@ const Navbar = () => {
 
 	return (
 		<Flex sx={sx.container}>
-			<MenuToggle toggle={toggle} isOpen={isOpen} />
+			<MenuToggle isOpen={isOpen} toggle={toggle} />
 			<MenuLinkContainer isOpen={isOpen} toggle={toggle} />
 		</Flex>
 	);
@@ -28,7 +28,6 @@ const sx = {
 		mb: "8",
 		p: "8",
 		background: "background",
-		// color: {["black", "black", "primary.700", "primary.700"]},
 	},
 };
 
