@@ -4,7 +4,7 @@ const MenuLink = ({ children, to, changeColor, resume }: Props) => {
 	const handleClick = (e: any) => {
 		// if not dark mode button, scroll to corresponding section.
 		// else switch color mode.
-		if(e.target.title && e.target.title !== null)
+		if(e.target.title && e.target.title !== null && e.target.title !== "DarkMode")
 			document.getElementById(e.target.title)!.scrollIntoView({ behavior: "smooth" });
 		else changeColor();
 	};

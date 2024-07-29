@@ -8,7 +8,7 @@ const AboutMeMobile = () => {
 	return (
 		<Box mb="20">
 			<Center>
-				<Box id="About Me" sx={{...sx.about, ...gradient}}>
+				<Box id="About" sx={{...sx.about, ...gradient}}>
 					<Box sx={sx.content}>
 						<Center sx={sx.image}>
 							<Image
@@ -17,6 +17,7 @@ const AboutMeMobile = () => {
 								maxWidth="200px"
 								src={foto}
 								alt="Bryan Mitchell Flores"
+								sx={colorMode === "light" ? undefined : {...sx.imageGradient}}
 							/>
 						</Center>
 						<Spacer p="2" />
@@ -80,6 +81,11 @@ const sx = {
 		h: "inherit",
 		w: "inherit",
 		flexDirection: "column",
+	},
+	imageGradient: {
+		border: "2px solid transparent",
+		background: `linear-gradient(#1a202c, #1a202c) padding-box, 
+		linear-gradient(135deg, #eb008b, #06f1ea) border-box`,
 	},
 };
 
