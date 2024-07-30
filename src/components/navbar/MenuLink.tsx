@@ -18,7 +18,7 @@ const MenuLink = ({ children, to, changeColor, resume }: Props) => {
 	)
 
 	return (
-		resume ? resumeLink : <Link color="text"><Text display="block" title={to} onClick={handleClick}>{children}</Text></Link>
+		resume ? resumeLink : <Link aria-label={children} color="text"><Text display="block" title={to} onClick={handleClick}>{children}</Text></Link>
 	)
 		
 };	

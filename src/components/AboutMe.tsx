@@ -72,6 +72,7 @@ const AboutMe = () => {
 const sx = {
 	container: {
 		mb: "20",
+		background: "background"
 	},
 	about: {
 		maxW: "88vw",

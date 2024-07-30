@@ -14,8 +14,8 @@ const Footer = () => {
 			<Text mb="2" color="text">Built by Bryan - {year}</Text>
 			<Center>
 				<HStack>
-					<a href="https://github.com/bryan-bmf" target="_blank">{colorMode === 'light' ? <Image src={github} boxSize="20px" /> : <Image src={githubdark} boxSize="20px" />}</a>
-					<a href="https://www.linkedin.com/in/bryanmitchellflores/" target="_blank"><Image src={linkedin} boxSize="20px" /></a>
+					<a href="https://github.com/bryan-bmf" target="_blank">{colorMode === 'light' ? <Image alt="github" src={github} boxSize="20px" /> : <Image alt="github" src={githubdark} boxSize="20px" />}</a>
+					<a href="https://www.linkedin.com/in/bryanmitchellflores/" target="_blank"><Image  alt="linkedin" src={linkedin} boxSize="20px" /></a>
 				</HStack>
 			</Center>
 		</Box>
@@ -30,9 +30,10 @@ const sx = {
 		position: "relative",
 		bottom: 0,
 		width: "100%",
+		background: "background"
 	},
 	lightGradient: {
-		background: `linear-gradient(white, white) padding-box, 
+		background: `linear-gradient(#f9f9f9, #f9f9f9) padding-box, 
 	linear-gradient(135deg, black, black) border-box`,
 	},
 	darkGradient: {

@@ -33,7 +33,9 @@ const ProjectCard = ({
 	else gifSrc = cpc;
 
 	const { colorMode, toggleColorMode } = useColorMode();
-	let gradient = colorMode === "light" ? undefined : sx.darkGradient;
+	let gradient = colorMode === "light" ? sx.card : sx.darkGradient;
+
+	let altText = `A gif depicting the ${title} website`;
 
 	return (
 		<Card maxW="xs" variant="outline" sx={gradient}>
@@ -41,6 +43,7 @@ const ProjectCard = ({
 				<Image
 					src={gifSrc}
 					borderRadius="lg"
+					aria-label={altText}
 				/>
 				<Stack mt="6" spacing="3">
 					<Heading size="md">{title}</Heading>
@@ -60,11 +63,11 @@ const ProjectCard = ({
 			<Divider />
 			<CardFooter justifyContent="center">
 				<ButtonGroup spacing="2">
-					<Link href={github} isExternal>
-						<Button  sx={sx.codeButton}>View Code</Button>
+					<Link role="button" aria-label="view code" href={github} isExternal>
+						<Button sx={sx.codeButton}>View Code</Button>
 					</Link>
 					{site ? (
-						<Link href={site} isExternal>
+						<Link role="button" aria-label="view site" href={site} isExternal>
 							<Button sx={sx.siteButton}>View Site</Button>
 						</Link>
 					) : null}
@@ -91,6 +94,9 @@ const sx = {
             background: "siteButtonHover",
         },
 	},
+	card: {
+		boxShadow: "0px 4px 8px 0px rgba(0,0,0,0.2)",
+	}
 };
 
 interface Props {
