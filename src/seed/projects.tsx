@@ -26,7 +26,7 @@ const projects = [
 			"Nivo Graphs",
 		],
 		github: "https://github.com/bryan-bmf/my-vinyl-collection",
-		site: "https:/bit.ly/mibellonera",
+		site: "https://bit.ly/mibellonera",
 		gif: "vinyl",
 	},
 	{
