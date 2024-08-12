@@ -25,13 +25,13 @@ const projects = [
 			"Spotify API",
 			"Nivo Graphs",
 		],
-		github: "https://github.com/bryan-bmf/anime-list",
+		github: "https://github.com/bryan-bmf/my-vinyl-collection",
 		site: "https:/bit.ly/mibellonera",
 		gif: "vinyl",
 	},
 	{
 		title: "Clean Plate Club",
-		description: `A simple web app to keep track of my favorite recipes with filters to easily find whatever recipe I wanted to cook.
+		description: `A simple web app to keep track of my favorite recipes with filters to easily find whatever recipe I want to cook.
 		I used a PostgreSQL database to store my recipes and a Flask backend to gain more experience with other technologies.`,
 		techStack: [
 			"React",
@@ -41,7 +41,7 @@ const projects = [
 			"Flask",
 			"PostgreSQL",
 		],
-		github: "https://github.com/bryan-bmf/anime-list",
+		github: "https://github.com/bryan-bmf/clean-plate-club",
 		gif: "cpc",
 	},
 ];
