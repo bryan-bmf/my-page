@@ -42,6 +42,7 @@ const projects = [
 			"PostgreSQL",
 		],
 		github: "https://github.com/bryan-bmf/clean-plate-club",
+		site: "http://cleanplateclub-website.s3-website.us-east-2.amazonaws.com/",
 		gif: "cpc",
 	},
 ];
