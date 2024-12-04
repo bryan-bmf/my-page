@@ -15,9 +15,6 @@ import {
 	UnorderedList,
 	useColorMode
 } from "@chakra-ui/react";
-import anime from "../assets/anime.gif";
-import cpc from "../assets/cpc.gif";
-import vinyl from "../assets/vinyl.gif";
 
 const ProjectCard = ({
 	title,
@@ -27,10 +24,6 @@ const ProjectCard = ({
 	site,
 	gif,
 }: Props) => {
-	let gifSrc = "";
-	if (gif === "anime") gifSrc = anime;
-	else if (gif === "vinyl") gifSrc = vinyl;
-	else gifSrc = cpc;
 
 	const { colorMode, toggleColorMode } = useColorMode();
 	let gradient = colorMode === "light" ? sx.card : sx.darkGradient;
@@ -41,7 +34,7 @@ const ProjectCard = ({
 		<Card maxW="xs" variant="outline" sx={gradient}>
 			<CardBody>
 				<Image
-					src={gifSrc}
+					src={gif}
 					borderRadius="lg"
 					aria-label={altText}
 				/>
